@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/PeopleApp/.vs/PeopleApp/v16
+/PeopleApp/PeopleApp/obj
+/PeopleApp/.vs/PeopleApp/config
+/PeopleApp/PeopleApp/bin/Debug/netcoreapp3.1
+/PeopleApp/PeopleApp.Tests/bin/Debug/netcoreapp3.1
+/PeopleApp/PeopleApp.Tests/obj/Debug/netcoreapp3.1
+/PeopleApp/PeopleApp.Tests/obj

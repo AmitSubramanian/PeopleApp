@@ -1,0 +1,47 @@
+﻿@model PeopleApp.ViewModels.AddEditDelete
+@{
+    ViewData["Title"] = "Confirm Person Deletion";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<div class="col-md-4">
+    <partial name="~/Views/Shared/_Alerts.cshtml" />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-md">
+                @Model.Name
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <label asp-for="Email"></label>
+            </div>
+            <div class="col-sm">
+                @Model.Email
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <label asp-for="IsActive"></label>
+            </div>
+            <div class="col-md">
+                @(Model.IsActive ? "Yes" : "No")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <form asp-controller="Home" asp-action="Delete" asp-antiforgery="true" method="post">
+                    <input asp-for="PersonId" type="hidden" />
+                    <button class="btn-primary" type="submit" onclick="location.href='@Url.Action("Delete", "Home", new { personid = Model.PersonId })'">Confirm Deletion</button>
+                </form>
+            </div>
+            <div class="col-sm">
+                <button class="btn-primary" type="button" onclick="location.href='@Url.Action("Index", "Home")'">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

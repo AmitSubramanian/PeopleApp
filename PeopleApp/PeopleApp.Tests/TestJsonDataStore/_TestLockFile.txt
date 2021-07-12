@@ -1,0 +1,3 @@
+***DO NOT DELETE THIS FILE***
+
+This file is used by the application as a simple locking mechanism to ensure that only one Add/Update/Delete operation can be done on the People.json file across all instances of this application.
