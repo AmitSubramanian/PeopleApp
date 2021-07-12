@@ -23,7 +23,7 @@ A simple CRUD application to maintain a Person list stored as a JSON file.
   - The file wwwroot\_LockFile.txt is used to avoid concurrent writes.  If the user initiates an Add/Edit/Delete operation through a browser window, all sessions in other browser windows will not be able to Add/Edit/Delete to the file until the first browser window has completed its operation.
 
 # Areas for Improvement
-- Performance Note:  Stored one Person JSON record per line (instead of a JSON array of Person records).  This will allow an Add operation to simply append a new record to the file, instead of rewriting all records.  However, in that case, the file records would not be stored in a proper JSON format.
+- Performance Note:  Consider storing one Person JSON record per line (instead of a JSON array of Person records).  This will allow an Add operation to simply append a new record to the file, instead of rewriting all records.  However, in that case, the file records would not be stored in a proper JSON format.
 - If the solution is extended to have another record type (e.g. a Role record, where a User may have multiple Roles), and transactions are required, a UnitOfWork class can be written.
 - For more complex functionality, a DbContext Provider for JSON data store can be written (and hosted as.a NuGet package). This will ensure that the JSON data store can be used in a way similar to database providers.
 - The solution contains Unit Test Cases for the Repository.  Unit Test Cases can also be added for the Controller.
