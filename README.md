@@ -3,9 +3,9 @@ A simple CRUD application to maintain a Person list stored as a JSON file.
 
 # Getting Started
   1.	Installation process
-      - Pull the repository down to your local machine, open the .sln file in Visual Studio 2019, and hit Ctrl-F5 to run.
+  - Pull the repository down to your local machine, open the .sln file in Visual Studio 2019, and hit Ctrl-F5 to run.
   2.	Software dependencies
-      - .NET Core 3.1
+  - .NET Core 3.1
 
 # Design Notes
 - The application contains the following layers: View, Repository, and FileContext (which reads the JSON file).
